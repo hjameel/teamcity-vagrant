@@ -65,8 +65,7 @@ Vagrant.configure(2) do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
    config.vm.provision "shell", inline: <<-SHELL
-     wget https://download.jetbrains.com/teamcity/TeamCity-9.1.6.tar.gz
-     sudo tar zxfg TeamCity-9.1.6.tar.gz -C /opt
+     sudo tar zxfg /vagrant/TeamCity-9.1.6.tar.gz -C /opt
      /opt/TeamCity/bin/runAll.sh
    SHELL
 end
